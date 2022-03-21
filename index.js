@@ -32,7 +32,7 @@ for (var i = 0; i < boxObj.length; i++) {
 // convert that value to a Number and store it to a variable
 
 function getRandomNumber() {
-  return Math.floor(Math.random() * 3 + 1);
+  return Math.floor(Math.random() * 3);
 }
 
 // create a random number between 1-3 and store it to a variable
