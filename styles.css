@@ -1,0 +1,88 @@
+:root {
+  --primary-color: #6003c3;
+  --white: #ffffff;
+  --box-color-1: #fcff00;
+  --box-color-2: #57ffc9;
+  --box-color-3: #a5ff01;
+}
+/* Main styling */
+
+body,
+header,
+* {
+  text-align: center;
+  padding: 0;
+  justify-content: center;
+  font-family: "Bebas Neue", Impact, sans-serif;
+  margin: 0;
+}
+header h1 {
+  font-size: 1.5rem;
+  max-width: 100%;
+  margin: 15px;
+}
+
+/* header styling  */
+header {
+  color: white;
+  background-color: #6003c3;
+  display: flex;
+}
+
+/* score styling */
+.score {
+  display: flex;
+}
+
+#message {
+  color: #6003c3;
+  margin-top: 20px;
+  font-size: larger;
+}
+
+.score div {
+  color: #6003c3;
+  padding: 20px;
+  font-size: 1.5rem;
+}
+
+/* Box Styling  */
+
+#box-1 {
+  background-color: #fcff00;
+}
+
+#box-2 {
+  background-color: #a5ff01;
+}
+
+#box-3 {
+  background-color: #a5ff01;
+}
+.box {
+  border-color: #6003c3;
+  border-radius: 26px;
+  text-align: center;
+  border: solid 5px;
+  color: #6003c3;
+  text-align: center;
+  line-height: 20vh;
+  height: 140px;
+  font-size: 7rem;
+  margin: 30px;
+  width: 33%;
+}
+
+.boxes {
+  display: flex;
+  justify-content: space-around;
+  filter: drop-shadow(0 0 0.75rem black);
+}
+
+/* Media sizes  */
+@media only screen and (min-width: 350px) and (max-width: 650px) {
+  .boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+}
