@@ -17,7 +17,7 @@ const winner = document.getElementById("wins");
 // target all .box elements and attach a click event listener to each one using a loop
 const boxObj = document.querySelectorAll(".box");
 for (var i = 0; i < boxObj.length; i++) {
-  boxObj[i].onclick = function (event) {
+  boxObj[i].onclick = function (_event) {
     pickedNumber = parseInt(this.textContent);
     winnerNum = getRandomNumber();
     confirmWin(pickedNumber, winnerNum);
