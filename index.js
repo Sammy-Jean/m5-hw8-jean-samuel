@@ -7,6 +7,8 @@ const losingMessage = [
 
 var winnerNum = 0;
 var loserNum = 0;
+var winnerCounter = 0;
+var loserCounter = 0;
 
 // Create variables that target elements with the following IDs: 'message', 'wins', 'losses'
 var pickedNumber = 0;
@@ -17,7 +19,7 @@ const winner = document.getElementById("wins");
 // target all .box elements and attach a click event listener to each one using a loop
 const boxObj = document.querySelectorAll(".box");
 for (var i = 0; i < boxObj.length; i++) {
-  boxObj[i].onclick = function (_event) {
+  boxObj[i].onclick = function (event) {
     pickedNumber = parseInt(this.textContent);
     winnerNum = getRandomNumber();
     confirmWin(pickedNumber, winnerNum);
@@ -36,22 +38,19 @@ function getRandomNumber() {
 // create a random number between 1-3 and store it to a variable
 // This number will represent the winning box
 
-// determine if the box clicked is equal to the random number
-// if the numbers match, display a winning message by changing the text content of the div#message element
-// if the numbers match, increment wins and display the win count in div#wins
 function confirmWin(winnerNum, pickedNumber) {
   if (pickedNumber == winnerNum) {
     message.textContent = "Awesome, you did it!";
-    winnerNum++;
+    winnerCounter++
   } else {
     message.textContent = losingMessage[winnerNum - 1];
-    loserNum++;
+    loserCounter++
   }
 }
 
 // if the numbers don't match, change the div#message element's text to a random losing message from the array above
 // if the numbers don't match, increment losses and display the loss count in div#losses
 function total() {
-  winner.innerHTML = "<h1>Yay, I Won - " + winnerNum + "</h1>";
-  lost.innerHTML = "<h1>Boo, I Lost - " + loserNum + "</h1>";
+  winner.innerHTML = "<h1>Yay, I Won - " + winnerCounter + "</h1>";
+  lost.innerHTML = "<h1>Boo, I Lost - " +  loserCounter + "</h1>";
 }
